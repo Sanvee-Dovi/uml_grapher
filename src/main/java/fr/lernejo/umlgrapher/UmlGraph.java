@@ -3,7 +3,7 @@ package fr.lernejo.umlgrapher;
 public class UmlGraph {
      final Class  aClass;
 
-    public UmlGraph(Class aClass) {
+    public UmlGraph(Class aClass, Class... bClass) {
         this.aClass = aClass;
     }
     public final String as(GraphType graphType) {
