@@ -1,7 +1,5 @@
 package fr.lernejo.umlgrapher;
-import com.sun.jdi.InterfaceType;
 import picocli.CommandLine;
-import java.util.Objects;
 import java.util.concurrent.Callable;
 public class Launcher implements Callable<Integer> {
     @CommandLine.Option(names = { "-c", "--classes" } ,required = true, description = "allows you to fill in the classes from which to start the analysis")
@@ -15,7 +13,6 @@ public class Launcher implements Callable<Integer> {
         System.out.println(umlGraph.as(Graph));
         return null;
     }
-
     public static void main(String... args) {
         int exitCode = new CommandLine(new Launcher()).execute(args);
         System.exit(exitCode);
